@@ -6,7 +6,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
-
 import '../helper/show_snack_bar.dart';
 
 class LoginPage extends StatefulWidget {
@@ -88,12 +87,14 @@ class _LoginPageState extends State<LoginPage> {
                         try {
                           await loginUser();
                           showSnackBar(context, 'Success');
-                          Navigator.pushNamed(context, 'bunesscard');
+                          // Navigator.pushNamed(context, 'bunesscard');
                         } on FirebaseAuthException catch (e) {
-                          if (e.code == 'weak-password') {
-                            showSnackBar(context, 'weak password');
-                          } else if (e.code == 'email-already-in-use') {
-                            showSnackBar(context, 'amail is already exsist');
+                          if (e.code == 'user-not-found') {
+                            print('No user found for that email.');
+                             showSnackBar(context, 'No user found for that email.');
+                          } else if (e.code == 'wrong-password') {
+                            print('Wrong password provided for that user.');
+                             showSnackBar(context, 'Wrong password provided for that user.');
                           }
                         } catch (e) {
                           print(e);
@@ -101,7 +102,9 @@ class _LoginPageState extends State<LoginPage> {
                         }
                         isLoading = false;
                         setState(() {});
-                      } else {}
+                      } else {
+                        // showSnackBar(context, 'not found');
+                      }
                     },
                     text: 'Login',
                   ),
