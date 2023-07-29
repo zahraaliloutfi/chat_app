@@ -1,11 +1,13 @@
 import 'package:chat_application/busness_card.dart';
+import 'package:chat_application/pages/chat_page.dart';
 import 'package:chat_application/pages/login_screen.dart';
 import 'package:chat_application/pages/register_page.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
-void main()async {
-   WidgetsFlutterBinding.ensureInitialized();
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
@@ -20,11 +22,11 @@ class ScholarApp extends StatelessWidget {
     return MaterialApp(
       routes: {
         'LoginPage': (context) => const LoginPage(),
-                'bunesscard': (context) =>  BusnessCardApp(),
-        RegisterPage.id: (context) =>  RegisterPage(),
+        ChatPage.id: (context) => ChatPage(),
+        RegisterPage.id: (context) => RegisterPage(),
       },
       debugShowCheckedModeBanner: false,
-      initialRoute: 'LoginPage',
+      initialRoute: ChatPage.id,
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:chat_application/constants.dart';
+import 'package:chat_application/pages/chat_page.dart';
 import 'package:chat_application/pages/register_page.dart';
 import 'package:chat_application/widgets/custom_button.dart';
 import 'package:chat_application/widgets/custom_text_field.dart';
@@ -87,14 +88,16 @@ class _LoginPageState extends State<LoginPage> {
                         try {
                           await loginUser();
                           showSnackBar(context, 'Success');
-                          // Navigator.pushNamed(context, 'bunesscard');
+                          Navigator.pushNamed(context, ChatPage.id);
                         } on FirebaseAuthException catch (e) {
                           if (e.code == 'user-not-found') {
                             print('No user found for that email.');
-                             showSnackBar(context, 'No user found for that email.');
+                            showSnackBar(
+                                context, 'No user found for that email.');
                           } else if (e.code == 'wrong-password') {
                             print('Wrong password provided for that user.');
-                             showSnackBar(context, 'Wrong password provided for that user.');
+                            showSnackBar(context,
+                                'Wrong password provided for that user.');
                           }
                         } catch (e) {
                           print(e);
