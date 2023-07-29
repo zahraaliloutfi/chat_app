@@ -23,7 +23,7 @@ class ChatBuble extends StatelessWidget {
           color: kPrimaryColor,
         ),
         child: Text(
-          'hhhhhhhhhhq',
+          'i am zahra ali',
           style: TextStyle(color: Colors.white),
         ),
       ),
