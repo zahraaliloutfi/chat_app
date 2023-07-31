@@ -6,7 +6,6 @@ import 'package:chat_application/widgets/custom_text_field.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
-
 import '../helper/show_snack_bar.dart';
 
 class LoginPage extends StatefulWidget {

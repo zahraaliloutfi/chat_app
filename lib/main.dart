@@ -1,9 +1,8 @@
-import 'package:chat_application/busness_card.dart';
 import 'package:chat_application/pages/chat_page.dart';
 import 'package:chat_application/pages/login_screen.dart';
 import 'package:chat_application/pages/register_page.dart';
-import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/material.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -22,8 +21,8 @@ class ScholarApp extends StatelessWidget {
     return MaterialApp(
       routes: {
         'LoginPage': (context) => const LoginPage(),
-        ChatPage.id: (context) => ChatPage(),
-        RegisterPage.id: (context) => RegisterPage(),
+        ChatPage.id: (context) =>  ChatPage(),
+        RegisterPage.id: (context) => const RegisterPage(),
       },
       debugShowCheckedModeBanner: false,
       initialRoute: ChatPage.id,

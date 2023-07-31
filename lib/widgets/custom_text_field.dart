@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:email_validator/email_validator.dart';
 
 class CustomTextFormField extends StatelessWidget {
   String? hintText;
   Function(String)? onChanged;
-  CustomTextFormField({
+  CustomTextFormField({super.key, 
     this.onChanged,
     this.hintText,
   });
@@ -16,6 +15,7 @@ class CustomTextFormField extends StatelessWidget {
         if (data!.isEmpty) {
           return 'field if empty ';
         }
+        return null;
         // else if (!EmailValidator.validate(data)) {
         //   return 'invalid';
         // }

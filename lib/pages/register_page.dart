@@ -8,7 +8,7 @@ import '../widgets/custom_button.dart';
 import '../widgets/custom_text_field.dart';
 
 class RegisterPage extends StatefulWidget {
-  RegisterPage({super.key});
+  const RegisterPage({super.key});
   static String id = 'RegisterPage';
 
   @override

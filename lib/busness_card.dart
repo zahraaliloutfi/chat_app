@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 
 class BusnessCardApp extends StatelessWidget {
+  const BusnessCardApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF274460),
+      backgroundColor: const Color(0xFF274460),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           // crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            CircleAvatar(
+            const CircleAvatar(
               radius: 92,
               backgroundColor: Colors.white,
               child: CircleAvatar(
@@ -20,7 +22,7 @@ class BusnessCardApp extends StatelessWidget {
                     'https://cdn2.iconfinder.com/data/icons/flat-pack-1/64/Female-1024.png'),
               ),
             ),
-            Text(
+            const Text(
               'Zahra Ali',
               style: TextStyle(
                 color: Colors.white,
@@ -29,7 +31,7 @@ class BusnessCardApp extends StatelessWidget {
                 fontFamily: 'Pacifico',
               ),
             ),
-            Text(
+            const Text(
               'FLUTTER DEVELOPER',
               style: TextStyle(
                 color: Colors.grey,
@@ -37,7 +39,7 @@ class BusnessCardApp extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            Divider(
+            const Divider(
               thickness: 0.6,
               height: 10,
               color: Colors.grey,
@@ -45,7 +47,7 @@ class BusnessCardApp extends StatelessWidget {
               endIndent: 40,
             ),
             Padding(
-              padding: EdgeInsets.only(
+              padding: const EdgeInsets.only(
                 left: 16,
                 right: 16,
                 bottom: 10,
@@ -57,7 +59,7 @@ class BusnessCardApp extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12),
                 ),
                 height: 58,
-                child: Row(
+                child: const Row(
                   children: [
                     Padding(
                       padding: EdgeInsets.only(
@@ -91,9 +93,9 @@ class BusnessCardApp extends StatelessWidget {
                 child: Card(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)),
-                  margin: EdgeInsets.symmetric(horizontal: 16),
+                  margin: const EdgeInsets.symmetric(horizontal: 16),
                   color: Colors.white,
-                  child: ListTile(
+                  child: const ListTile(
                     leading: Icon(
                       Icons.mail,
                       size: 32,
