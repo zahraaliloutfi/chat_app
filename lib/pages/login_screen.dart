@@ -1,5 +1,6 @@
 import 'package:chat_application/constants.dart';
 import 'package:chat_application/pages/chat_page.dart';
+import 'package:chat_application/pages/group_chat.dart';
 import 'package:chat_application/pages/register_page.dart';
 import 'package:chat_application/widgets/custom_button.dart';
 import 'package:chat_application/widgets/custom_text_field.dart';
@@ -87,7 +88,7 @@ class _LoginPageState extends State<LoginPage> {
                         try {
                           await loginUser();
                           showSnackBar(context, 'Success');
-                          Navigator.pushNamed(context, ChatPage.id);
+                          Navigator.pushNamed(context, GroupChatScreen.id);
                         } on FirebaseAuthException catch (e) {
                           if (e.code == 'user-not-found') {
                             print('No user found for that email.');

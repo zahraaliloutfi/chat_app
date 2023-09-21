@@ -1,4 +1,5 @@
 import 'package:chat_application/pages/chat_page.dart';
+import 'package:chat_application/pages/group_chat.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
@@ -90,7 +91,7 @@ class _RegisterPageState extends State<RegisterPage> {
                           await registerUser();
                           showSnackBar(context, 'Success');
 
-                          Navigator.pushNamed(context, ChatPage.id);
+                          Navigator.pushNamed(context, GroupChatScreen.id);
                         } on FirebaseAuthException catch (e) {
                           if (e.code == 'weak-password') {
                             showSnackBar(context, 'weak password');
